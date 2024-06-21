@@ -1,0 +1,67 @@
+  <!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+   <link rel="stylesheet" href="estilo.css">
+   <title>EXEMPLO DE HTML 5</title>
+ </head>
+<body>
+
+      <h1>JOGO PARA VER SEU QI COMPARADO COM OUTROS PERSONAGENS</h1>
+      <nav>
+      <a href="index.html">HOME</a>
+      <a href="pagina2.html">PERSONAGENS</a>
+      <a href="pagina3.html">FILME</a>
+      <a href="pagina4.html">MAPA</a>
+      <a href="pagina5.html">QI</a>
+        </nav>
+
+      <script type="text/javascript"> 
+     //Linha de comentário
+     
+     // Calculo do numero aleatorio entre 0 e 100 com random()
+     // retornando um valor inteiro com math.round
+
+     valor = prompt("Digite um valor:","")
+     var num = Math.round(valor*(Math.random())) 
+     
+     var num_in, x=50, tentativas=0 //Variaveis auxiliares
+     
+     while (true) {
+       num_in = prompt("Adivinhe o numero? (0-"+valor+")") 
+       tentativas++                //Incremento do numero de tentativas
+       if (num_in == num) break    //Saida do ciclo
+       if (num_in > num) {
+          alert("O numero é menor, Tente de novo...") 
+         } else {
+          alert("O numero é maior, Tente de novo...") 
+         }
+       x = num_in 
+     }                            // Fecha o while
+     document.write("<h4>Número: ",num,"<p></h4>") 
+     document.write("<h4>Você acertou em ",tentativas) 
+     document.write(" tentativas!</h4>")
+
+     if (tentativas<=1){
+      document.write("  Seu QI se equipara com o do próprio Batman, um verdadeiro detetive!  ")}
+ 
+else if (tentativas<=2){
+ document.write("  Seu QI se equipara com o de Charada, um psicopata genial    ")}
+
+else if (tentativas<=3){
+ document.write("  Seu QI se equipara com o de Comissárario Gordon, um policial bastante convicto   ")}
+
+ else if (tentativas<=4){
+ document.write("  Seu QI se equipara com o de Robin, o aprendiz do Batman   ")}
+
+ else if (tentativas<=5){
+ document.write(" Seu QI se equipara com o de Duas Caras, seu cerébro é uma moeda ")}
+
+ else if (tentativas>=6){
+ document.write(" Seu Qi se equipara com o do Coringa, Não existe.   ")}
+
+    
+ 
+</script>
+</body>
+</html>
